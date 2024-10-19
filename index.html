@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Segmentation Demo</title>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Image Segmentation with MediaPipe</h1>
+    </header>
+
+    <div class="content">
+      <div class="webcam-section">
+        <div class="controls">
+          <label for="blurControl" class="control-label">Adjust Blur</label>
+          <input type="range" id="blurControl" min="0" max="20" step="1" value="5" class="blur-slider">
+        </div>
+        <div class="webcam">
+          <button id="webcamButton" class="mdc-button mdc-button--raised webcam-button">
+            <span class="mdc-button__ripple"></span>
+            <span class="mdc-button__label">ENABLE WEBCAM</span>
+          </button>
+          <video id="webcam" autoplay style="display: none;"></video>
+          <canvas id="canvas" width="1280" height="720"></canvas>
+        </div>
+      </div>
+
+      <!-- Sidebar for image selection -->
+      <aside class="sidebar">
+        <div class="image-grid">
+          <!-- Grid with images -->
+          <img src="images/blank.png" id="image0" class="grid-image selected">
+          <img src="images/1.jpg" id="image1" class="grid-image">
+          <img src="images/2.jpg" id="image2" class="grid-image">
+          <img src="images/3.jpg" id="image3" class="grid-image">
+          <img src="images/4.jpg" id="image4" class="grid-image">
+          <img src="images/5.jpg" id="image5" class="grid-image">
+          <img src="images/6.jpg" id="image6" class="grid-image">
+          <img src="images/7.jpg" id="image7" class="grid-image">
+          <img src="images/8.jpg" id="image8" class="grid-image">
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script type="module" src="function.js"></script>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</body>
+</html>
